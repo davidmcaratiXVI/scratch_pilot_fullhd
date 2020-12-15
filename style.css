@@ -1,0 +1,247 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  background-image: url("assets/table.jpg");
+  margin: 0;
+}
+body .scratcher {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 80vh;
+  height: 50vh;
+  position: relative;
+  margin-top: 41vh;
+}
+body .scratcher canvas {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  cursor: url("assets/coin.png") 32 32 , pointer;
+  z-index: 1;
+  position: absolute;
+}
+body .scratcher .hidden {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+  /* grid-gap: 5vw; */
+  /* grid-template: repeat(3, 1fr) / repeat(3, 1fr); */
+  /* z-index: -1; */
+  /* margin-top: -90vh; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+body .scratcher .hidden .li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+}
+@media (orientation: portrait) {
+  body .scratcher .hidden .li {
+    font-size: 20vw;
+ }
+}
+body .scratcher .hidden .li b {
+  cursor: pointer;
+}
+body .scratcher .hidden :first-child {
+  background: url("https://svgshare.com/i/C7U.svg") no-repeat center center;
+  background-size: contain;
+  background-color: #ddd;
+}
+body .scratcher .hidden :nth-child(2) {
+  background: url("https://svgshare.com/i/C9L.svg") no-repeat center center;
+  background-size: contain;
+  background-color: #ddd;
+}
+body .scratcher .hidden :nth-child(3) {
+  background: url("https://svgshare.com/i/C7T.svg") no-repeat center center;
+  background-size: contain;
+  background-color: #ddd;
+}
+body .scratcher .hidden :nth-child(4) {
+  background: url("https://svgshare.com/i/C8J.svg") no-repeat center center;
+  background-size: contain;
+  background-color: #ddd;
+}
+body .scratcher .hidden :nth-child(5) {
+  background: url("https://svgshare.com/i/C80.svg") no-repeat center center;
+  background-size: contain;
+  background-color: #ddd;
+}
+body .scratcher .hidden :nth-child(6) {
+  background: url("https://svgshare.com/i/C7S.svg") no-repeat center center;
+  background-size: contain;
+  background-color: #ddd;
+}
+body .scratcher .hidden :nth-child(7) {
+  background: url("https://svgshare.com/i/C8q.svg") no-repeat center center;
+  background-size: contain;
+  background-color: #ddd;
+}
+body .scratcher .hidden :nth-child(8) {
+  background: url("https://svgshare.com/i/C81.svg") no-repeat center center;
+  background-size: contain;
+  background-color: #ddd;
+}
+body .scratcher .hidden :nth-child(9) {
+  background: url("https://svgshare.com/i/C9u.svg") no-repeat center center;
+  background-size: contain;
+  background-color: #ddd;
+}
+
+#det_container{
+  justify-content: center;
+  align-items: center;
+  width: 80vh;
+  height: 43vh;
+  position: absolute;
+  top: 20px;
+}
+
+#l_icn{
+  left: -7vw;
+  position: absolute;
+  top: 0;
+  -webkit-animation: rotateY 4s infinite ease;
+  animation: rotateY 4s infinite ease;
+  filter: drop-shadow(2px 4px 6px black);
+  width: 24vw;
+}
+
+#am_crd{
+  right: -4vw;
+  position: absolute;
+  top: 0px;
+  -webkit-animation: rotateY 8s infinite ease;
+  animation: rotateY 8s infinite ease;
+  filter: drop-shadow(2px 4px 6px black);
+  width: 25vw;
+  height: 20vw;
+}
+
+#gf_crd{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+@-webkit-keyframes rotateY {
+  0% { transform: rotateY( 0deg); }
+  25% { transform: rotateY( 20deg); }
+  75% { transform: rotateY( -20deg); }
+  100% { transform: rotateY( 0deg); }
+}
+
+#gf_num{
+  color: white;
+  position: absolute;
+  bottom: 3.27vw;
+  left: 2.7vw;
+  font-size: 2.5vw;
+}
+
+#scr_text{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+#tf_1{
+  position: absolute;
+  width: 19vh;
+  top: 5vh;
+  left: 4vh;
+  display: none;
+}
+#tf_2{
+  position: absolute;
+  width: 19vh;
+  bottom: 3vh;
+  left: 31vh;
+  display: none;
+}
+#tf_3{
+  position: absolute;
+  width: 19vh;
+  bottom: 3.4vh;
+  right: 3.5vh;
+  display: none;
+}
+
+#big_25{
+  position: fixed;
+  transform: translate(0%,0%);
+  z-index: 5;
+  width: 1vh;
+  display: none;
+}
+
+.big25anim{
+  -webkit-animation: animate_big_25 3s ease;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animate_big_25 {
+  0% {
+    display: block;
+    width: 1vh;
+  }
+  95%{
+    opacity: 1;
+  }
+  100%{
+    width: 55vh;
+    opacity: 0;
+  }
+}
+
+.finishAnimation{
+  -webkit-animation: animate_to_center 3s ease;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animate_to_center {
+  0% {
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  100%{
+    position: absolute;
+    width: 35vh;
+    transform: translate(20%,-130%);
+    opacity: 0;
+  }
+}
+
+#ttp{
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  display: none;
+  width: 0;
+  //width: 50vh;
+}
+
+#wrm{
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  display: none;
+  width: 0;
+ // width: 50vh;
+}
